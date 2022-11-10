@@ -14,6 +14,7 @@ public class MarioWorld extends World
     public static final int MAXN_ROWS = 20;
     public static final int GROUND_ROW = 17;
     public static final int TILE_SIZE = 30; // pixels
+    public static final int GAP = 2;
     
     private Mario mario;
     
@@ -82,6 +83,8 @@ public class MarioWorld extends World
         int xEnd = xStart + size;
         int yStart = GROUND_ROW;
         int yEnd = GROUND_ROW - size;
+        xStart++;
+      
         //int rows = 0;
         
         //Block Block = new Block();
@@ -93,8 +96,17 @@ public class MarioWorld extends World
              Block Block = new Block();
         addObject(Block, x, y);
         }
-        xStart++;
+         //second half cols
+         //start = xEnd (11) + GAP (2) = (13)
+         //end = xENd (11)
+        for (int x = xEnd + GAP; x<xEnd + GAP + (xEnd - xStart); x++)
+        {
+            Block Block = new Block();
+            addObject(Block, x,y);
+        
     }
+    xStart++;
 }
-    
 }
+}
+
