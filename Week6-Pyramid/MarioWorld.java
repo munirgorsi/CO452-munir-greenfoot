@@ -78,8 +78,8 @@ public class MarioWorld extends World
     public void buildPyramid()
     {
         int size = getPyramidSize();
-        int xStart = x;
-        int xEnd = x + size;
+        int xStart = 4;
+        int xEnd = xStart + size;
         int yStart = GROUND_ROW;
         int yEnd = GROUND_ROW - size;
         //int rows = 0;
